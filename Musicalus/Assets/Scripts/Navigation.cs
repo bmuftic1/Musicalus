@@ -36,11 +36,18 @@ public class Navigation : MonoBehaviour {
 		if (razumijem && korisnickoIme.Length > 1 && sifra.Length > 1) {
 			PlayerPrefs.SetString ("korisnickoIme", korisnickoIme);
 			PlayerPrefs.SetString ("sifra", sifra);
+			postaviPocetnePodatke ();
 			predjiNaPocetnu ();
+		
 		} else {
 			//messageBox
 			EditorUtility.DisplayDialog("Upozorenje", "Niste popunili sva polja!", "OK");
 		}
+	}
+
+	private void postaviPocetnePodatke() {
+		//uradi ovo i za ostale, tj za 12 mjeseci u trenutnoj godini
+		PlayerPrefs.SetString ("Jun2018", "");
 	}
 
 

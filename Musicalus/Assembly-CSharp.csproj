@@ -54,7 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\animController.cs" />
-     <Compile Include="Assets\Scripts\CollisionWithNote.cs" />
+     <Compile Include="Assets\Scripts\CreateReport.cs" />
      <Compile Include="Assets\Scripts\Jump.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\Navigation.cs" />
@@ -71,16 +71,16 @@
      <None Include="Assets\theNotes\00_ReadMe\ReadMe_kr.txt" />
      <None Include="Assets\theNotes\00_ReadMe\ReadMe_jp.txt" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/MM/Desktop/Zavrsni/Musicalus/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/MM/Desktop/zavrsniGIT/Musicalus/Musicalus/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/MM/Desktop/Zavrsni/Musicalus/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/MM/Desktop/zavrsniGIT/Musicalus/Musicalus/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/MM/Desktop/Zavrsni/Musicalus/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/MM/Desktop/zavrsniGIT/Musicalus/Musicalus/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/MM/Desktop/Zavrsni/Musicalus/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/MM/Desktop/zavrsniGIT/Musicalus/Musicalus/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
