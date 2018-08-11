@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 public class VerifyLogin : MonoBehaviour {
 
@@ -27,7 +29,9 @@ public class VerifyLogin : MonoBehaviour {
 		if (korisnickoIme == PlayerPrefs.GetString ("korisnickoIme") && pass == PlayerPrefs.GetString ("sifra")) {
 			SceneManager.LoadScene ("RoditeljScena");
 		} else {
-			EditorUtility.DisplayDialog("Upozorenje", "Neispravna sifra i/ili korisnicko ime!", "OK");
-		}
+#if UNITY_EDITOR
+            EditorUtility.DisplayDialog("Upozorenje", "Neispravna sifra i/ili korisnicko ime!", "OK");
+#endif
+        }
 	}
 }
