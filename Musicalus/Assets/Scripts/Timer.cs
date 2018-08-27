@@ -19,5 +19,6 @@ public class Timer : MonoBehaviour {
 		int sec = (int)time;
 		timer.text = sec.ToString ();
 		TrackingScore.timer = sec;
+        PlayerPrefs.SetInt("Timer", sec);
 	}
 }

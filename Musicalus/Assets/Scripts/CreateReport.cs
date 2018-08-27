@@ -16,8 +16,7 @@ public static class CreateReport
 
 		String message = "Something went wrong.";
 
-		//dodaj u inicijalizaciji da se doda string "" kao Keeping Score za svaki mjesec
-		String temp = PlayerPrefs.GetString(""+months[date.Month-1]+date.Year.ToString());
+		String temp = PlayerPrefs.GetString(""+months[date.Month-1]+date.Year.ToString(),"");
 
 		if (temp != "") {
 
@@ -28,12 +27,12 @@ public static class CreateReport
 			if (DateTime.Today.Day == Int32.Parse (lastDate [0])) {
 				message = "Score already added for today!";
 			} else {
-				temp += DateTime.Today.ToString (pattern) + " " + TrackingScore.timer+"\n";
+				temp += DateTime.Today.ToString (pattern) + " " + PlayerPrefs.GetInt("Timer").ToString() + "\n";
 				message = "Score added!";
 				PlayerPrefs.SetString(""+months[date.Month-1]+date.Year.ToString(), temp);
 			}
 		} else {
-			temp = DateTime.Today.ToString (pattern) + " " + TrackingScore.timer+"\n";
+			temp = DateTime.Today.ToString (pattern) + " " + PlayerPrefs.GetInt("Timer").ToString() + "\n";
 			message = "Score added!";
 			PlayerPrefs.SetString(""+months[date.Month-1]+date.Year.ToString(), temp);
 		}
@@ -76,9 +75,14 @@ public static class CreateReport
 
 
 	public static void restartData(){
-		for (int i = 0; i < months.Length; i++) {
-			PlayerPrefs.SetString ("" + months [i], "");
-		}
+        String name = PlayerPrefs.GetString("korisnickoIme");
+        String pass = PlayerPrefs.GetString("sifra");
+
+        PlayerPrefs.DeleteAll();
+
+        PlayerPrefs.SetString("korisnickoIme", name);
+        PlayerPrefs.SetString("sifra", pass);
+        //plus, postavke ces morati sacuvati
 	}
 
 

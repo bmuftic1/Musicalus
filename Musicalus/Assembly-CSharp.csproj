@@ -63,12 +63,13 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\animController.cs" />
     <Compile Include="Assets\Scripts\CreateReport.cs" />
+    <Compile Include="Assets\Scripts\DisplayAnnualReport.cs" />
+    <Compile Include="Assets\Scripts\DisplayMonthlyReport.cs" />
     <Compile Include="Assets\Scripts\InitializeData.cs" />
     <Compile Include="Assets\Scripts\IntroLoading.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Navigation.cs" />
     <Compile Include="Assets\Scripts\ShowResult.cs" />
-    <Compile Include="Assets\Scripts\Spawn.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\TrackingScore.cs" />
     <Compile Include="Assets\Scripts\VerifyLogin.cs" />

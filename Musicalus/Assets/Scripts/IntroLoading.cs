@@ -15,9 +15,16 @@ public class IntroLoading : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (image.transform.position.x>=432f)
+		if (image.transform.position.x>=900f)
         {
-            SceneManager.LoadScene("InitializeData");
+            if (PlayerPrefs.GetString("korisnikoIme", null)==null)
+            {
+                SceneManager.LoadScene("InitializeScena");
+            } else
+            {
+                SceneManager.LoadScene("PocetnaScena");
+            }
+            
         }
 	}
 }

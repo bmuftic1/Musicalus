@@ -10,7 +10,7 @@ public class ShowResult : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        result.text = TrackingScore.timer.ToString();
+        result.text = PlayerPrefs.GetInt("Timer").ToString();
 	}
 	
 	// Update is called once per frame

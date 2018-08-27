@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -16,9 +17,9 @@ public class InitializeData : MonoBehaviour
 	public InputField PASS_INIT;
 	public Toggle AGREE_INIT;
 
-
-	// Use this for initialization
-	void Start () {
+   
+    // Use this for initialization
+    void Start () {
 		korisnickoIme = null;
 		sifra = null;
 		razumijem = false;
@@ -38,7 +39,6 @@ public class InitializeData : MonoBehaviour
 		if (razumijem && korisnickoIme.Length > 1 && sifra.Length > 4) {
 			PlayerPrefs.SetString ("korisnickoIme", korisnickoIme);
 			PlayerPrefs.SetString ("sifra", sifra);
-			postaviPocetnePodatke ();
 			SceneManager.LoadScene ("PocetnaScena");
 
 		} else {
@@ -47,11 +47,6 @@ public class InitializeData : MonoBehaviour
             EditorUtility.DisplayDialog("Upozorenje", "Niste popunili sva polja!", "OK");
 #endif
         }
-	}
-
-	private void postaviPocetnePodatke() {
-		//uradi ovo i za ostale, tj za 12 mjeseci u trenutnoj godini
-		PlayerPrefs.SetString ("Jun2018", "");
 	}
 }
 
