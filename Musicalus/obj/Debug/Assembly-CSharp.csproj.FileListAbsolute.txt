@@ -159,3 +159,5 @@ C:\Users\MM\Desktop\zavrsniGIT\Musicalus\Musicalus\Temp\bin\Debug\UnityEngine.Sp
 C:\Users\MM\Desktop\zavrsniGIT\Musicalus\Musicalus\Temp\bin\Debug\UnityEngine.ParticlesLegacyModule.xml
 C:\Users\MM\Desktop\zavrsniGIT\Musicalus\Musicalus\obj\Debug\Assembly-CSharp.dll
 C:\Users\MM\Desktop\zavrsniGIT\Musicalus\Musicalus\obj\Debug\Assembly-CSharp.pdb
+C:\Users\MM\Desktop\zavrsniGIT\Musicalus\Musicalus\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\MM\Desktop\zavrsniGIT\Musicalus\Musicalus\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

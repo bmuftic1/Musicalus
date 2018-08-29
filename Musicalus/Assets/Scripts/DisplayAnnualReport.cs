@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -17,8 +18,13 @@ public class DisplayAnnualReport : MonoBehaviour {
         container.sizeDelta = new Vector2(Screen.width, Screen.height);
         data = new List<double>();
 
-        //data = CreateReport.getAnnualReport(DateTime.Today.year);
+        data = CreateReport.getAnnualResults(DateTime.Today.Year);
 
+        float w = Screen.width - Screen.width * 0.05f;
+        float h = Screen.height - Screen.height * 0.15f;
+        container.sizeDelta = new Vector2(w, h);
+        container.position = new Vector3(Screen.width / 2, Screen.height * 0.425f, 0);
+        /*
         data.Add(60);
         data.Add(48);
         data.Add(30);
@@ -31,10 +37,10 @@ public class DisplayAnnualReport : MonoBehaviour {
         data.Add(12);
         data.Add(43);
         data.Add(33);
-
+        */
         if (data.Count == 0)
         {
-            //notify, don't do anything
+            return;
         }
         else
         {

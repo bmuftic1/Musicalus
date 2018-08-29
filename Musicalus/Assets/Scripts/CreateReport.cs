@@ -12,30 +12,46 @@ public static class CreateReport
 
 
 
-	public static String saveResult(DateTime date) {
+	public static String saveResult() {
 
-		String message = "Something went wrong.";
+        DateTime date = DateTime.Today;
 
-		String temp = PlayerPrefs.GetString(""+months[date.Month-1]+date.Year.ToString(),"");
 
-		if (temp != "") {
+        String message = "Something went wrong.";
 
-			String[] scores = temp.Split('\n');
-			String[] lastEntry = scores [scores.Length - 1].Split(' ');
-			String[] lastDate = lastEntry [0].Split('-');
+        try
+        {
 
-			if (DateTime.Today.Day == Int32.Parse (lastDate [0])) {
-				message = "Score already added for today!";
-			} else {
-				temp += DateTime.Today.ToString (pattern) + " " + PlayerPrefs.GetInt("Timer").ToString() + "\n";
-				message = "Score added!";
-				PlayerPrefs.SetString(""+months[date.Month-1]+date.Year.ToString(), temp);
-			}
-		} else {
-			temp = DateTime.Today.ToString (pattern) + " " + PlayerPrefs.GetInt("Timer").ToString() + "\n";
-			message = "Score added!";
-			PlayerPrefs.SetString(""+months[date.Month-1]+date.Year.ToString(), temp);
-		}
+            String temp = PlayerPrefs.GetString("" + months[date.Month - 1] + date.Year.ToString(), "");
+
+            if (temp != "")
+            {
+
+                String[] scores = temp.Split('\n');
+                String[] lastEntry = scores[scores.Length - 1].Split(' ');
+                String[] lastDate = lastEntry[0].Split('-');
+
+                if (DateTime.Today.Day == Int32.Parse(lastDate[0]))
+                {
+                     message = "Score already added for today!";
+                }
+                else
+                {
+                    temp += "\n" + DateTime.Today.ToString(pattern) + " " + PlayerPrefs.GetInt("Timer").ToString();
+                    message = "Score added!";
+                    PlayerPrefs.SetString("" + months[date.Month - 1] + date.Year.ToString(), temp);
+                }
+            }
+            else
+            {
+                temp = DateTime.Today.ToString(pattern) + " " + PlayerPrefs.GetInt("Timer").ToString();
+                message = "Score added!";
+                PlayerPrefs.SetString("" + months[date.Month - 1] + date.Year.ToString(), temp);
+            }
+        } catch(Exception e)
+        {
+            return message+"\n"+e.Message;
+        } 
 
 		return message;
 
@@ -48,13 +64,15 @@ public static class CreateReport
 		List<int> results = new List<int> ();
 
 		String temp = PlayerPrefs.GetString(""+months[month-1] +year.ToString());
+
 		if (temp != "") {
 
 			String[] scores = temp.Split ('\n');
+
 			for (int i = 0; i < scores.Length; i++) {
-				String[] lastEntry = scores [scores.Length - 1].Split(' ');
-				results.Add (Int32.Parse(lastEntry [2]));
-			}
+				String[] lastEntry = scores [i].Split(' ');
+				results.Add (Int32.Parse(lastEntry[1]));
+            }
 
 		}
 		return results;
@@ -66,7 +84,16 @@ public static class CreateReport
 
 		for (int i = 1; i <= 12; i++) {
 			List<int> monthly = getMonthlyResults (i, 2018);
-			results.Add (monthly.Average());
+
+            if (monthly.Count == 0)
+            {
+                results.Add(0);
+            }
+            else
+            {
+
+                results.Add(monthly.Average());
+            }
 		}
 
 		return results;
@@ -82,8 +109,9 @@ public static class CreateReport
 
         PlayerPrefs.SetString("korisnickoIme", name);
         PlayerPrefs.SetString("sifra", pass);
-        //plus, postavke ces morati sacuvati
-	}
+        PlayerPrefs.SetInt("pjesma", InformationHolder.CurrentSong);
+        PlayerPrefs.SetInt("brzina", InformationHolder.CurrentSpeed);
+    }
 
 
 

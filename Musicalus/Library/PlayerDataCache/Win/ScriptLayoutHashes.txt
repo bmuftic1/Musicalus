@@ -1,8 +1,18 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/MM/Desktop/ProbaMjesecni/Musicalus.exe
+C:/Users/MM/Desktop/zavrsniGIT/Musicalus/Game/Musicalus.exe
 SceneListBegin?
 Assets/Scenes/Intro.unity
+Assets/Scenes/Roditelj/GodisnjiIzvjestajScena.unity
+Assets/Scenes/Igrica.unity
+Assets/Scenes/InitializeScena.unity
+Assets/Scenes/Roditelj/Login.unity
+Assets/Scenes/Roditelj/MjesecniIzvjestajScena.unity
+Assets/Scenes/PocetnaScena.unity
+Assets/Scenes/Roditelj/PostavkeScena.unity
+Assets/Scenes/EndGameReward.unity
+Assets/Scenes/ResultScene.unity
+Assets/Scenes/Roditelj/RoditeljScena.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -126,7 +136,7 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 96f3ea9f23b6f08e60710ebb4af49174 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 f16835701e71dd5d6fb1fed4b7aff1d8 Unity.TextMeshPro.dll:TMPro.TMP_Asset
-2008de1a77e394bcdd6ebb4b8f655b62 Assembly-CSharp.dll:.IntroLoading
+f337a7f20cc12c72064d3c0036b94091 Assembly-CSharp.dll:.IntroLoading
 ed98ba032b8d8de09a4aba8a42f2a513 Assembly-CSharp.dll:.InitializeData
 713bfee7619c37fe3e7ddc9912532c0a Assembly-CSharp.dll:.GUIConrtol_note
 486cd95c82d8305219c352c06b776e1f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
@@ -168,11 +178,14 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 98d69a140ec0084cde3b6a5e09aea295 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
+fe66499c9ddcae4c4cb157b09382d1f4 Assembly-CSharp.dll:.SaveChanges
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 5a94805d50f24f190326d0765f7a8093 Assembly-CSharp.dll:.Timer
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Music
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Navigation
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 2f9af06a78208a67db480e9bfed4a076 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 9318334b30e9f195f573b2ce00154b95 Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.DisplayAnnualReport
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
+c886ae8b37a880f31f16afad1019ca5e Assembly-CSharp.dll:.EndGameAnimation

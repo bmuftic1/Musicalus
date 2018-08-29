@@ -39,7 +39,11 @@ public class InitializeData : MonoBehaviour
 		if (razumijem && korisnickoIme.Length > 1 && sifra.Length > 4) {
 			PlayerPrefs.SetString ("korisnickoIme", korisnickoIme);
 			PlayerPrefs.SetString ("sifra", sifra);
-			SceneManager.LoadScene ("PocetnaScena");
+
+            PlayerPrefs.SetInt("pjesma", 0);
+            PlayerPrefs.SetInt("brzina", 0);
+
+            SceneManager.LoadScene ("PocetnaScena");
 
 		} else {
             //messageBox

@@ -3,13 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour {
 
     List<float> keyPosition;
     public AudioSource audioSource;
     public AudioClip[] notes;
+
     int whichNote;
+    float speed;
 
     Vector3 initialPosition= new Vector3(125.0f, 36.0f, -64.3f);
 	Vector3 finalPosition = new Vector3(35.5f, 36.0f, -64.3f);
@@ -22,6 +25,7 @@ public class Movement : MonoBehaviour {
         keyPosition = new List<float>(); //positions of the notes
         whichNote = 0;
         audioSource = GetComponent<AudioSource>();
+        speed = InformationHolder.getSpeed(InformationHolder.CurrentSpeed);
 
         keyPosition.Add(36.2f);
         keyPosition.Add(37.7f);
@@ -37,7 +41,7 @@ public class Movement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//create random number or a vector of positions
-		this.gameObject.transform.Translate(Vector3.right*7f*Time.deltaTime);
+		this.gameObject.transform.Translate(Vector3.right*speed*Time.deltaTime);
 		if (this.gameObject.transform.position.x < finalPosition.x) {
 
             whichNote = getRandomValue();
@@ -47,6 +51,7 @@ public class Movement : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			SceneManager.LoadScene ("PocetnaScena");
 		}
+
 	}
 
 
@@ -60,10 +65,10 @@ public class Movement : MonoBehaviour {
             Vector3 newPosition = new Vector3(125.0f, keyPosition[whichNote], -64.3f);
             this.gameObject.transform.position = newPosition;
 
-            TrackingScore.score++;
-			if (TrackingScore.score >= 20) {
-				SceneManager.LoadScene ("ResultScene");
-				String message = CreateReport.saveResult (DateTime.Today);
+            InformationHolder.score++;
+			if (InformationHolder.score >= 20) {
+                SceneManager.LoadScene ("EndGameReward");
+				//String message = CreateReport.saveResult();
 			}
 		}
 	}

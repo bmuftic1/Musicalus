@@ -65,13 +65,16 @@
     <Compile Include="Assets\Scripts\CreateReport.cs" />
     <Compile Include="Assets\Scripts\DisplayAnnualReport.cs" />
     <Compile Include="Assets\Scripts\DisplayMonthlyReport.cs" />
+    <Compile Include="Assets\Scripts\EndGameAnimation.cs" />
+    <Compile Include="Assets\Scripts\InformationHolder.cs" />
     <Compile Include="Assets\Scripts\InitializeData.cs" />
     <Compile Include="Assets\Scripts\IntroLoading.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
+    <Compile Include="Assets\Scripts\Music.cs" />
     <Compile Include="Assets\Scripts\Navigation.cs" />
+    <Compile Include="Assets\Scripts\SaveChanges.cs" />
     <Compile Include="Assets\Scripts\ShowResult.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
-    <Compile Include="Assets\Scripts\TrackingScore.cs" />
     <Compile Include="Assets\Scripts\VerifyLogin.cs" />
     <Compile Include="Assets\theNotes\Script\CamControl.cs" />
     <Compile Include="Assets\theNotes\Script\GUIConrtol_note.cs" />
