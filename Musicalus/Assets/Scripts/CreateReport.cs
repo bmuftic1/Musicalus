@@ -24,7 +24,7 @@ public static class CreateReport
 
             String temp = PlayerPrefs.GetString("" + months[date.Month - 1] + date.Year.ToString(), "");
 
-            if (temp != "")
+            if (temp != "" && temp!=null)
             {
 
                 String[] scores = temp.Split('\n');

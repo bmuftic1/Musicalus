@@ -16,6 +16,7 @@ public class InitializeData : MonoBehaviour
 	public InputField IME_INIT;
 	public InputField PASS_INIT;
 	public Toggle AGREE_INIT;
+    public Text warning;
 
    
     // Use this for initialization
@@ -24,7 +25,8 @@ public class InitializeData : MonoBehaviour
 		sifra = null;
 		razumijem = false;
 		AGREE_INIT.isOn = razumijem;
-	}
+        warning.gameObject.SetActive(false);
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -36,7 +38,7 @@ public class InitializeData : MonoBehaviour
 		korisnickoIme = IME_INIT.text;
 		razumijem = AGREE_INIT.isOn;
 
-		if (razumijem && korisnickoIme.Length > 1 && sifra.Length > 4) {
+		if (razumijem && korisnickoIme.Length >= 1 && sifra.Length >= 1) {
 			PlayerPrefs.SetString ("korisnickoIme", korisnickoIme);
 			PlayerPrefs.SetString ("sifra", sifra);
 
@@ -46,10 +48,7 @@ public class InitializeData : MonoBehaviour
             SceneManager.LoadScene ("PocetnaScena");
 
 		} else {
-            //messageBox
-#if UNITY_EDITOR
-            EditorUtility.DisplayDialog("Upozorenje", "Niste popunili sva polja!", "OK");
-#endif
+            warning.gameObject.SetActive(true);
         }
 	}
 }

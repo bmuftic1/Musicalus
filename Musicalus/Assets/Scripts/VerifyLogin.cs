@@ -11,10 +11,11 @@ public class VerifyLogin : MonoBehaviour {
 
 	public InputField ime;
 	public InputField sifra;
+    public Text warning;
 
 	// Use this for initialization
 	void Start () {
-		
+        warning.gameObject.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -29,9 +30,7 @@ public class VerifyLogin : MonoBehaviour {
 		if (korisnickoIme == PlayerPrefs.GetString ("korisnickoIme") && pass == PlayerPrefs.GetString ("sifra")) {
 			SceneManager.LoadScene ("RoditeljScena");
 		} else {
-#if UNITY_EDITOR
-            EditorUtility.DisplayDialog("Upozorenje", "Neispravna sifra i/ili korisnicko ime!", "OK");
-#endif
+            warning.gameObject.SetActive(true);
         }
 	}
 }

@@ -19,7 +19,7 @@ public class SaveChanges : MonoBehaviour {
 
     public void saveChanges()
     {
-        if (PlayerPrefs.GetString("sifra")==oldPassword.text && newPassword.text.Length>4)
+        if (PlayerPrefs.GetString("sifra")==oldPassword.text)
         {
             PlayerPrefs.SetString("sifra", newPassword.text);
         }
