@@ -1,18 +1,19 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/MM/Desktop/zavrsniGIT/Musicalus/Game/Musicalus.exe
+C:/Users/MM/Desktop/zavrsniGIT/Musicalus/Musicalus/Temp/UnityTempFile-8b9d2fe31c000104d931bec88c79845c/PlayerWithTests/PlayerWithTests.exe
 SceneListBegin?
+Assets/InitTestScene636725302372672589.unity
 Assets/Scenes/Intro.unity
-Assets/Scenes/Roditelj/GodisnjiIzvjestajScena.unity
+Assets/Scenes/GodisnjiIzvjestajScena.unity
 Assets/Scenes/Igrica.unity
 Assets/Scenes/InitializeScena.unity
-Assets/Scenes/Roditelj/Login.unity
-Assets/Scenes/Roditelj/MjesecniIzvjestajScena.unity
+Assets/Scenes/Login.unity
+Assets/Scenes/MjesecniIzvjestajScena.unity
 Assets/Scenes/PocetnaScena.unity
-Assets/Scenes/Roditelj/PostavkeScena.unity
+Assets/Scenes/PostavkeScena.unity
 Assets/Scenes/EndGameReward.unity
 Assets/Scenes/ResultScene.unity
-Assets/Scenes/Roditelj/RoditeljScena.unity
+Assets/Scenes/RoditeljScena.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -128,7 +129,7 @@ fc061f3ae8a876c0687e86378d4a447c UnityEngine.Networking.dll:UnityEngine.Networki
 382b8ef512fa8d6108723a01b57af65b UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 d22c788799ee45d8676254eccf20e8b8 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 87618b1ba5583117810d4a5e09efe86d Assembly-CSharp.dll:.Movement
-429b568facb70479b0bd6f5e309e016d Assembly-CSharp.dll:.VerifyLogin
+f63bd54881b3f0d80de558fc2a7ed183 Assembly-CSharp.dll:.VerifyLogin
 d75dc834c5dec688db75a55a1724c90f UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 486cd95c82d8305219c352c06b776e1f UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule

@@ -19,17 +19,17 @@ public class Music : MonoBehaviour {
     {
 
         AudioSource[] songs = GetComponents<AudioSource>();
-        if (PlayerPrefs.GetInt("pjesma", 0)==0)
+        if (PlayerPrefs.GetInt("song", 0)==0)
         {
             songs[0].mute = false;
             songs[1].mute = true;
             songs[2].mute = true;
-        } else if (PlayerPrefs.GetInt("pjesma", 0) == 1)
+        } else if (PlayerPrefs.GetInt("song", 0) == 1)
         {
             songs[0].mute = true;
             songs[1].mute = false;
             songs[2].mute = true;
-        } else if (PlayerPrefs.GetInt("pjesma", 0) == 2)
+        } else if (PlayerPrefs.GetInt("song", 0) == 2)
         {
             songs[0].mute = true;
             songs[1].mute = true;
@@ -39,10 +39,10 @@ public class Music : MonoBehaviour {
 
         if (SceneManager.GetActiveScene().name=="Igrica" || SceneManager.GetActiveScene().name == "EndGameReward")
         {
-            songs[PlayerPrefs.GetInt("pjesma", 0)].mute = true;
+            songs[PlayerPrefs.GetInt("song", 0)].mute = true;
         } else
         {
-            songs[PlayerPrefs.GetInt("pjesma", 0)].mute = false;
+            songs[PlayerPrefs.GetInt("song", 0)].mute = false;
         }
 
 

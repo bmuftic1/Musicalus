@@ -26,7 +26,7 @@ public class IntroLoading : MonoBehaviour {
 
 		if (image.transform.position == finalDestination)
         {
-            if (PlayerPrefs.GetString("korisnikoIme", "")=="")
+            if (PlayerPrefs.GetString("user", "")=="")
             {
                 SceneManager.LoadScene("InitializeScena");
             } else

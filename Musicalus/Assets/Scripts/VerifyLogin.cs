@@ -10,7 +10,7 @@ using UnityEditor;
 public class VerifyLogin : MonoBehaviour {
 
 	public InputField ime;
-	public InputField sifra;
+	public InputField password;
     public Text warning;
 
 	// Use this for initialization
@@ -24,10 +24,10 @@ public class VerifyLogin : MonoBehaviour {
 	}
 
 	public void login(){
-		string korisnickoIme = ime.text;
-		string pass = sifra.text;
+		string user = ime.text;
+		string pass = password.text;
 
-		if (korisnickoIme == PlayerPrefs.GetString ("korisnickoIme") && pass == PlayerPrefs.GetString ("sifra")) {
+		if (user == PlayerPrefs.GetString ("user") && pass == PlayerPrefs.GetString ("password")) {
 			SceneManager.LoadScene ("RoditeljScena");
 		} else {
             warning.gameObject.SetActive(true);

@@ -10,8 +10,8 @@ using UnityEditor;
 
 public class InitializeData : MonoBehaviour
 {
-	string korisnickoIme;
-	string sifra;
+	string user;
+	string password;
 	bool razumijem;
 	public InputField IME_INIT;
 	public InputField PASS_INIT;
@@ -21,8 +21,8 @@ public class InitializeData : MonoBehaviour
    
     // Use this for initialization
     void Start () {
-		korisnickoIme = null;
-		sifra = null;
+		user = null;
+		password = null;
 		razumijem = false;
 		AGREE_INIT.isOn = razumijem;
         warning.gameObject.SetActive(false);
@@ -34,16 +34,16 @@ public class InitializeData : MonoBehaviour
 	}
 
 	public void buttonNastaviClick(){
-		sifra = PASS_INIT.text;
-		korisnickoIme = IME_INIT.text;
+		password = PASS_INIT.text;
+		user = IME_INIT.text;
 		razumijem = AGREE_INIT.isOn;
 
-		if (razumijem && korisnickoIme.Length >= 1 && sifra.Length >= 1) {
-			PlayerPrefs.SetString ("korisnickoIme", korisnickoIme);
-			PlayerPrefs.SetString ("sifra", sifra);
+		if (razumijem && user.Length >= 1 && password.Length >= 1) {
+			PlayerPrefs.SetString ("user", user);
+			PlayerPrefs.SetString ("password", password);
 
-            PlayerPrefs.SetInt("pjesma", 0);
-            PlayerPrefs.SetInt("brzina", 0);
+            PlayerPrefs.SetInt("song", 0);
+            PlayerPrefs.SetInt("speed", 0);
 
             SceneManager.LoadScene ("PocetnaScena");
 

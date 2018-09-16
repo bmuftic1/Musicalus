@@ -66,12 +66,18 @@ public static class CreateReport
 		String temp = PlayerPrefs.GetString(""+months[month-1] +year.ToString());
 
 		if (temp != "") {
+            try
+            {
+                String[] scores = temp.Split('\n');
 
-			String[] scores = temp.Split ('\n');
-
-			for (int i = 0; i < scores.Length; i++) {
-				String[] lastEntry = scores [i].Split(' ');
-				results.Add (Int32.Parse(lastEntry[1]));
+                for (int i = 0; i < scores.Length; i++)
+                {
+                    String[] lastEntry = scores[i].Split(' ');
+                    results.Add(Int32.Parse(lastEntry[1]));
+                }
+            } catch(Exception e)
+            {
+                return new List<int>();
             }
 
 		}
@@ -102,15 +108,15 @@ public static class CreateReport
 
 
 	public static void restartData(){
-        String name = PlayerPrefs.GetString("korisnickoIme");
-        String pass = PlayerPrefs.GetString("sifra");
+        String name = PlayerPrefs.GetString("user");
+        String pass = PlayerPrefs.GetString("password");
 
         PlayerPrefs.DeleteAll();
 
-        PlayerPrefs.SetString("korisnickoIme", name);
-        PlayerPrefs.SetString("sifra", pass);
-        PlayerPrefs.SetInt("pjesma", InformationHolder.CurrentSong);
-        PlayerPrefs.SetInt("brzina", InformationHolder.CurrentSpeed);
+        PlayerPrefs.SetString("user", name);
+        PlayerPrefs.SetString("password", pass);
+        PlayerPrefs.SetInt("song", InformationHolder.CurrentSong);
+        PlayerPrefs.SetInt("speed", InformationHolder.CurrentSpeed);
     }
 
 

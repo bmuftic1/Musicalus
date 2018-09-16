@@ -17,13 +17,13 @@ public class DisplayMonthlyReport : MonoBehaviour {
         container = transform.Find("container").GetComponent<RectTransform>();
         
         data = new List<int>();
-        data = CreateReport.getMonthlyResults(DateTime.Today.Month, DateTime.Today.Year);
+        //data = CreateReport.getMonthlyResults(DateTime.Today.Month, DateTime.Today.Year);
 
         float w = Screen.width - Screen.width * 0.05f;
         float h = Screen.height - Screen.height * 0.15f;
         container.sizeDelta = new Vector2(w, h);
         container.position = new Vector3(Screen.width / 2, Screen.height * 0.425f, 0);
-        /*
+        
         data.Add(60);
         data.Add(48);
         data.Add(30);
@@ -54,7 +54,7 @@ public class DisplayMonthlyReport : MonoBehaviour {
         data.Add(23);
         data.Add(33);
         data.Add(13);
-        */
+        
         if (data.Count == 0)
         {
             return;
@@ -70,7 +70,7 @@ public class DisplayMonthlyReport : MonoBehaviour {
     private void display()
     {
         float height = container.sizeDelta.y;
-        float yMax = (float)(data.Max()+ data.Max()*0.2);
+        float yMax = (float)(data.Max()*1.2);
         float xSize = container.sizeDelta.x/32;
 
         for (int i=0; i<data.Count; i++)

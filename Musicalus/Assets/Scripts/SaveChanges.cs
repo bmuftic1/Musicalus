@@ -12,28 +12,28 @@ public class SaveChanges : MonoBehaviour {
 
     private void Start()
     {
-        melody.value = PlayerPrefs.GetInt("pjesma");
-        speedOfGame.value = PlayerPrefs.GetInt("brzina");
+        melody.value = PlayerPrefs.GetInt("song");
+        speedOfGame.value = PlayerPrefs.GetInt("speed");
     }
 
 
     public void saveChanges()
     {
-        if (PlayerPrefs.GetString("sifra")==oldPassword.text)
+        if (PlayerPrefs.GetString("password")==oldPassword.text)
         {
-            PlayerPrefs.SetString("sifra", newPassword.text);
+            PlayerPrefs.SetString("password", newPassword.text);
         }
 
 
-        if (melody.value != PlayerPrefs.GetInt("pjesma"))
+        if (melody.value != PlayerPrefs.GetInt("song"))
         {
-            PlayerPrefs.SetInt("pjesma", melody.value);
+            PlayerPrefs.SetInt("song", melody.value);
             InformationHolder.CurrentSong = melody.value;
         }
 
-        if (PlayerPrefs.GetInt("brzina") != speedOfGame.value)
+        if (PlayerPrefs.GetInt("speed") != speedOfGame.value)
         {
-            PlayerPrefs.SetInt("brzina", speedOfGame.value);
+            PlayerPrefs.SetInt("speed", speedOfGame.value);
             InformationHolder.CurrentSpeed = speedOfGame.value;
             CreateReport.restartData();
         }

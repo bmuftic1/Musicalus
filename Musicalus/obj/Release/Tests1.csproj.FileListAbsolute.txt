@@ -1,0 +1,2 @@
+C:\Users\MM\Desktop\zavrsniGIT\Musicalus\Musicalus\obj\Release\Tests1.csprojAssemblyReference.cache
+C:\Users\MM\Desktop\zavrsniGIT\Musicalus\Musicalus\obj\Release\Tests1.csproj.CoreCompileInputs.cache
